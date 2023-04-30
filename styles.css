@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color:hsl(218, 23%, 16%);
+}
+body{
+    min-height: 100vh;
+    min-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#containerAdvice{
+    width: 95%;
+    height: 350px;
+    position: relative;
+    background-color:  hsl(217, 19%, 24%);
+    border-radius: 8px;
+}
+#adviceNumber, #advice{
+    position: absolute;
+    background-color: hsl(217, 19%, 24%);
+    font-family: 'Manrope', sans-serif;
+}
+#adviceNumber{
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color:hsl(150, 100%, 66%);
+    z-index: 10;
+    
+}
+#advice{
+    top: 10%;
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    color: rgba(216, 215, 215, 0.892);
+    font-size: 28px;
+    font-weight: 800;
+    overflow-y: auto;
+}
+.container-line{
+    width: 100%;
+    position: absolute;
+    bottom: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: center;
+    background-color:  hsl(217, 19%, 24%);
+}
+.line{
+    width: 37%;
+    height: 1px;
+    background-color: hsla(193, 38%, 86%, 0.226);
+}
+
+.squad{
+    width: 2%;
+    height: 20px;
+    border-radius: 20%;
+    background-color: hsl(193, 38%, 86%);
+}
+.container-dice{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    left: 50%;
+    bottom: -15%;
+    transform: translate(-50%,-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: hsl(150, 100%, 66%);
+    transition: all 0.3s;
+}
+.container-dice:hover{
+    box-shadow: 0px 0px 15px hsl(150, 100%, 66%);
+    cursor: pointer;
+}
+.container-dice > img{
+    background-color: white;
+}
+.attribution{
+    align-self: flex-end;
+    min-width: 100%;
+    color: rgba(255, 255, 255, 0.545);
+    text-align: center;
+}
+@media (min-width: 1200px) {
+    #containerAdvice{
+        width: 45%;
+    }
+    #advice{
+        padding: 2em;
+    }
+    .squad{
+        width: 1%;
+    }
+}
